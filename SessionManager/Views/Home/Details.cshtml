@@ -1,0 +1,19 @@
+﻿@model Character
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<!--
+<div>
+    Id: @Model.Id
+</div>
+    -->
+<div>
+    Alignment: @Model.Alignment
+</div>
+<div>
+    Race: @Model.Race
+</div>
+<a asp-action="Index" asp-controller="Home">Home</a>

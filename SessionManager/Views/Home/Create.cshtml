@@ -1,0 +1,32 @@
+﻿@model Character
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post">
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Alignment"></label>
+        <select asp-for="Alignment"
+                asp-items="@Html.GetEnumSelectList<Alignment>()"></select>
+        <span asp-validation-for="Alignment"></span>
+    </div>
+
+    <div>
+        <label asp-for="Race"></label>
+        <select asp-for="Race"
+                asp-items="@Html.GetEnumSelectList<Race>()"></select>
+        <span asp-validation-for="Race"></span>
+    </div>
+
+    <input type="submit" name="save" value="Save" />
+</form>

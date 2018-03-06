@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Routing;
 using SessionManager.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using SessionManager.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace SessionManager
 {
@@ -28,6 +25,17 @@ namespace SessionManager
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            })
+            .AddOpenIdConnect(options =>
+            {
+                _configuration.Bind("AzureAd", options);
+            })
+            .AddCookie();
+
             services.AddDbContext<SessionManagerDbContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("SessionManager")));
             services.AddScoped<ICharacterData, SqlCharacterData>();
@@ -42,11 +50,11 @@ namespace SessionManager
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseRewriter(new RewriteOptions().AddRedirectToHttpsPermanent());
+            app.UseRewriter(new RewriteOptions().AddRedirectToHttpsPermanent());
 
             app.UseStaticFiles();
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
 
             app.UseMvc(ConfigureRoutes);
 

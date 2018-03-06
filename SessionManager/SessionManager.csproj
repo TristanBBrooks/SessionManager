@@ -5,8 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Views\Shared\Components\" />
+    <Compile Remove="Pages\Characters\Create.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Characters\Create.cshtml" />
+    <Content Remove="Pages\Characters\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Account\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

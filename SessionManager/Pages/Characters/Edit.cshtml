@@ -1,0 +1,33 @@
+﻿@page "{id}"
+@using SessionManager.Pages.Characters
+
+@model EditModel
+
+<h1>Edit @Model.Character.Name</h1>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Character.Id" />
+
+    <div>
+        <label asp-for="Character.Name"></label>
+        <input asp-for="Character.Name" />
+        <span asp-validation-for="Character.Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Character.Alignment"></label>
+        <select asp-for="Character.Alignment"
+                asp-items="@Html.GetEnumSelectList<Alignment>()"></select>
+        <span asp-validation-for="Character.Alignment"></span>
+    </div>
+
+    <div>
+        <label asp-for="Character.Race"></label>
+        <select asp-for="Character.Race"
+                asp-items="@Html.GetEnumSelectList<Race>()"></select>
+        <span asp-validation-for="Character.Race"></span>
+    </div>
+
+    <input type="submit" name="save" value="Save" />
+</form>

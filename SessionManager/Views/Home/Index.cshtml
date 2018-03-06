@@ -7,6 +7,10 @@
 
 <h1>All Characters</h1>
 
+@foreach (var character in Model.Characters)
+{
+    @Html.Partial("Partials/_Summary", character);
+}
 
 <div>
     <a class="btn btn-primary" asp-action="Create">Add Character</a>
