@@ -1,0 +1,11 @@
+C:\Users\Tristan\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.deps.json
+C:\Users\Tristan\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.runtimeconfig.json
+C:\Users\Tristan\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.runtimeconfig.dev.json
+C:\Users\Tristan\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.dll
+C:\Users\Tristan\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.pdb
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.csproj.CoreCompileInputs.cache
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.AssemblyInfoInputs.cache
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.AssemblyInfo.cs
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.dll
+C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.pdb
