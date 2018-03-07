@@ -5,13 +5,13 @@
     ViewBag.Title = "Home page";
 }
 
-<h1>All Characters</h1>
+<h1 align="center">All Characters</h1>
 
 @foreach (var character in Model.Characters)
 {
     @Html.Partial("Partials/_Summary", character);
 }
 
-<div>
+<div align="center">
     <a class="btn btn-primary" asp-action="Create">Add Character</a>
 </div>
