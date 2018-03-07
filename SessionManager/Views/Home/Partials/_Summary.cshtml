@@ -3,8 +3,24 @@
 <section class="panel panel-default">
     <h3 class="panel-heading">@Model.Name</h3>
     <div class="panel-body">
-        Alignment: @Model.Alignment<br />
-        Race: @Model.Race
+        <div class="row">
+            <div class="col-xs-2" align="right" style="border-right: 2px solid grey">
+                <div>
+                    Alignment
+                </div>
+                <div>
+                    Race
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <div>
+                    @Model.Alignment
+                </div>
+                <div>
+                    @Model.Race
+                </div>
+            </div>
+        </div>
     </div>
     <div class="panel-footer">
         <a class="btn btn-default" asp-action="Details" asp-route-id="@Model.Id">More</a>

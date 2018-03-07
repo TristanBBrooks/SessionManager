@@ -3,31 +3,35 @@
 
 @model EditModel
 
-<h1>Edit @Model.Character.Name</h1>
+<h1 align="center">Edit @Model.Character.Name</h1>
 
-<form method="post">
-
+<form method="post" class="form-horizontal">
     <input type="hidden" asp-for="Character.Id" />
-
-    <div>
-        <label asp-for="Character.Name"></label>
-        <input asp-for="Character.Name" />
-        <span asp-validation-for="Character.Name"></span>
+    <div class="form-group">
+        <label class="col-xs-2 control-label" asp-for="Character.Name"></label>
+        <div class="col-xs-10">
+            <input class="form-control" asp-for="Character.Name" />
+            <span asp-validation-for="Character.Name"></span>
+        </div>
     </div>
-
-    <div>
-        <label asp-for="Character.Alignment"></label>
-        <select asp-for="Character.Alignment"
-                asp-items="@Html.GetEnumSelectList<Alignment>()"></select>
-        <span asp-validation-for="Character.Alignment"></span>
+    <div class="form-group">
+        <label class="col-xs-2 control-label" asp-for="Character.Alignment"></label>
+        <div class="col-xs-10">
+            <select class="form-control" asp-for="Character.Alignment"
+                    asp-items="@Html.GetEnumSelectList<Alignment>()"></select>
+            <span asp-validation-for="Character.Alignment"></span>
+        </div>
     </div>
-
-    <div>
-        <label asp-for="Character.Race"></label>
-        <select asp-for="Character.Race"
-                asp-items="@Html.GetEnumSelectList<Race>()"></select>
-        <span asp-validation-for="Character.Race"></span>
+    <div class="form-group">
+        <label class="col-xs-2 control-label" asp-for="Character.Race"></label>
+        <div class="col-xs-10">
+            <select class="form-control" asp-for="Character.Race"
+                    asp-items="@Html.GetEnumSelectList<Race>()"></select>
+            <span asp-validation-for="Character.Race"></span>
+        </div>
     </div>
-
-    <input type="submit" name="save" value="Save" />
+    <br />
+    <div align="center">
+        <input class="btn btn-default" type="submit" name="save" value="Save" />
+    </div>
 </form>
