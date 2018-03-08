@@ -11,5 +11,6 @@ namespace SessionManager.Data
         }
 
         public DbSet<Character> Characters { get; set; }
+        public DbSet<Race> Races { get; set; }
     }
 }

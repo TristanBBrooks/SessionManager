@@ -12,9 +12,10 @@ using System;
 namespace SessionManager.Migrations
 {
     [DbContext(typeof(SessionManagerDbContext))]
-    partial class SessionManagerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180308215555_Update Character, add Race")]
+    partial class UpdateCharacteraddRace
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
