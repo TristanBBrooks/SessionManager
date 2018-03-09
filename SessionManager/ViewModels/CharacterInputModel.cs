@@ -1,17 +1,20 @@
 ﻿using SessionManager.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SessionManager.ViewModels
 {
-    public class CharacterEditModel
+    public class CharacterInputModel
     {
         [Required, MaxLength(100)]
         public string Name { get; set; }
 
         [Required]
-        public int Race { get; set; }
+        public Race Race { get; set; }
 
         [Required]
         public Alignment Alignment { get; set; }
+
+        public IEnumerable<Race> Races { get; set; }
     }
 }

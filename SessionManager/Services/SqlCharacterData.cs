@@ -27,7 +27,7 @@ namespace SessionManager.Services
 
         public Character Get(int id)
         {
-            return _context.Characters.FirstOrDefault(r => r.Id == id);
+            return _context.Characters.Include(_ => _.Race).FirstOrDefault(r => r.Id == id);
         }
 
         public IEnumerable<Character> GetAll()

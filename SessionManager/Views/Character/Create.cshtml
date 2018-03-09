@@ -1,4 +1,4 @@
-﻿@model Character
+﻿@model CharacterInputModel
 
 @{
     ViewBag.Title = "Create";
@@ -24,7 +24,7 @@
     <div>
         <label asp-for="Race"></label>
         <select asp-for="Race"
-                asp-items="@Html.GetEnumSelectList<Race>()"></select>
+                asp-items="@(new SelectList(Model.Races, "Id", "Name"))"></select>
         <span asp-validation-for="Race"></span>
     </div>
 

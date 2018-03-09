@@ -26,7 +26,7 @@
         <label class="col-xs-2 control-label" asp-for="Character.Race"></label>
         <div class="col-xs-10">
             <select class="form-control" asp-for="Character.Race"
-                    asp-items="@Html.GetEnumSelectList<Race>()"></select>
+                    asp-items="@(new SelectList(Model.Races, "Id", "Name"))"></select>
             <span asp-validation-for="Character.Race"></span>
         </div>
     </div>

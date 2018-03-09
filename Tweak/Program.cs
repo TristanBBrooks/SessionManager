@@ -8,23 +8,22 @@ namespace ScriptPad.Tweak
 {
     partial class Program
     {
-        static void Main(string[] args) => MainAsync(args).GetAwaiter().GetResult();
-#pragma warning disable 1998
-        static async Task MainAsync(string[] args)
+        static void Main(string[] args)
         {
-            await AddTestEntities();
+            SetupServices();
+            AddTestEntities();
         }
 
         static SessionManagerDbContext _dbContext;
          
 
-        static async Task AddTestEntities()
+        static void AddTestEntities()
         {
             IRaceData _raceData = new SqlRaceData(_dbContext);
 
             _raceData.Add(new SessionManager.Models.Race
             {
-                Name = "Dwarf",
+                Name = "Human",
                 Size = SessionManager.Models.Size.Medium,
                 Speed = 30
             });
@@ -34,12 +33,16 @@ namespace ScriptPad.Tweak
         {
             var services = new ServiceCollection();
             services.AddDbContext<SessionManagerDbContext>(
-                options => options.UseSqlServer("(localdb)\\MSSQLLocalDB; Database = SessionManager; Trusted_Connection = True; MultipleActiveResultSets = true"));
+                options => options.UseSqlServer(local));
             services.AddScoped<ICharacterData, SqlCharacterData>();
             services.AddScoped<IRaceData, SqlRaceData>();
             var provider = services.BuildServiceProvider();
 
             _dbContext = provider.GetService<SessionManagerDbContext>();
         }
+
+        static string local = "Server=(localdb)\\MSSQLLocalDB;Database=SessionManager;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+        public static string Local { get => local; set => local = value; }
     }
 }

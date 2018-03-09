@@ -1,0 +1,12 @@
+﻿@model RaceIndexViewModel
+
+@{ 
+    ViewBag.Title = "Races";
+}
+
+<h1 align="center">All Races</h1>
+
+@foreach (var race in Model.Races)
+{
+    @Html.Partial("Partials/_Summary", race)
+}

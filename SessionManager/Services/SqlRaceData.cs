@@ -32,7 +32,7 @@ namespace SessionManager.Services
 
         public IEnumerable<Race> GetAll()
         {
-            return _context.Races.OrderBy(r => r.Name);
+            return _context.Races.OrderBy(r => r.Name).ToList();
         }
 
         public Race Update(Race race)

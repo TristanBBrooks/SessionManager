@@ -1,0 +1,17 @@
+﻿<!--This is the directive, that allows intellisense when editing this cshtml document-->
+@model CharacterIndexViewModel
+
+@{
+    ViewBag.Title = "Characters";
+}
+
+<h1 align="center">All Characters</h1>
+
+@foreach (var character in Model.Characters)
+{
+    @Html.Partial("Partials/_Summary", character);
+}
+
+<div align="center">
+    <a class="btn btn-primary" asp-action="Create">Add Character</a>
+</div>

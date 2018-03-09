@@ -9,3 +9,5 @@ C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.Assembl
 C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.AssemblyInfo.cs
 C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.dll
 C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.pdb
+C:\Users\Tristan\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.json
+C:\Users\Tristan\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.dev.json
