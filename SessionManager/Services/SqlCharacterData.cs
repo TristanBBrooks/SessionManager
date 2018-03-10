@@ -32,7 +32,7 @@ namespace SessionManager.Services
 
         public IEnumerable<Character> GetAll()
         {
-            return _context.Characters.OrderBy(r => r.Name);
+            return _context.Characters.Include(_ => _.Race).OrderBy(r => r.Name);
         }
 
         public Character Update(Character character)

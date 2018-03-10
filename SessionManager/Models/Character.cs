@@ -14,9 +14,9 @@ namespace SessionManager.Models
 
         //public AbilityScores AbilityScores { get; set; }
 
-        //public int Experience { get; set; }
+        public int Experience { get; set; }
 
-        //public int Level { get; set; }
+        public int Level { get; set; }
 
         //public Class Class { get; set; } 
 

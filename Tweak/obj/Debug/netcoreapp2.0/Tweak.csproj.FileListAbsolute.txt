@@ -11,3 +11,16 @@ C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.dll
 C:\Users\Tristan\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.pdb
 C:\Users\Tristan\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.json
 C:\Users\Tristan\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.dev.json
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.deps.json
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.json
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.runtimeconfig.dev.json
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.dll
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\Tweak.pdb
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\SessionManager.dll
+D:\Code\SessionManager\Tweak\bin\Debug\netcoreapp2.0\SessionManager.pdb
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.csprojResolveAssemblyReference.cache
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.csproj.CoreCompileInputs.cache
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.AssemblyInfoInputs.cache
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.AssemblyInfo.cs
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.dll
+D:\Code\SessionManager\Tweak\obj\Debug\netcoreapp2.0\Tweak.pdb

@@ -9,3 +9,14 @@ C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\Sess
 C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.dll
 C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.pdb
 C:\Users\Tristan\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.csprojResolveAssemblyReference.cache
+D:\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.deps.json
+D:\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.runtimeconfig.json
+D:\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.runtimeconfig.dev.json
+D:\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.dll
+D:\Code\SessionManager\SessionManager\bin\Debug\netcoreapp2.0\SessionManager.pdb
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.csprojResolveAssemblyReference.cache
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.csproj.CoreCompileInputs.cache
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.AssemblyInfoInputs.cache
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.AssemblyInfo.cs
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.dll
+D:\Code\SessionManager\SessionManager\obj\Debug\netcoreapp2.0\SessionManager.pdb

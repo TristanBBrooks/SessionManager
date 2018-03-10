@@ -27,6 +27,62 @@ namespace ScriptPad.Tweak
                 Size = SessionManager.Models.Size.Medium,
                 Speed = 30
             });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Dragonborn",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 30
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Dwarf",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 25
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Elf",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 30
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Gnome",
+                Size = SessionManager.Models.Size.Small,
+                Speed = 30
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Half Elf",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 30
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Half Orc",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 30
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Halfling",
+                Size = SessionManager.Models.Size.Small,
+                Speed = 25
+            });
+
+            _raceData.Add(new SessionManager.Models.Race
+            {
+                Name = "Tiefling",
+                Size = SessionManager.Models.Size.Medium,
+                Speed = 30
+            });
         }
 
         static void SetupServices()
