@@ -15,6 +15,12 @@ namespace SessionManager.ViewModels
         [Required]
         public Alignment Alignment { get; set; }
 
+        [Required]
+        public int Level { get; set; }
+
+        [Required]
+        public int Experience { get; set; }
+
         public IEnumerable<Race> Races { get; set; }
     }
 }
