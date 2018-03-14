@@ -36,6 +36,8 @@ namespace SessionManager.Migrations
 
                     b.Property<int?>("RaceId");
 
+                    b.Property<int>("Speed");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RaceId");

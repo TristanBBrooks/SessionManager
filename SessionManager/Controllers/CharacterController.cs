@@ -60,11 +60,16 @@ namespace SessionManager.Controllers
             if (ModelState.IsValid)
             {
                 var races = _raceData.GetAll();
+                var modelRace = races.First(_ => _.Id == model.Race);
+
                 var newCharacter = new Character()
                 {
                     Name = model.Name,
                     Alignment = model.Alignment,
-                    Race = races.First(_ => _.Id == model.Race)
+                    Race = modelRace,
+                    Level = model.Level,
+                    Experience = model.Experience,
+                    Speed = modelRace.Speed
                 };
 
                 newCharacter = _characterData.Add(newCharacter);

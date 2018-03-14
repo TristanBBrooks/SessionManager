@@ -28,6 +28,6 @@ namespace SessionManager.Models
 
         //public Inventory Inventory { get; set; }
 
-        //public int Speed { get; set; }
+        public int Speed { get; set; }
     }
 }
