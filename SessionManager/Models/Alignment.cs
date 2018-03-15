@@ -1,16 +1,8 @@
 ﻿namespace SessionManager.Models
 {
-    public enum Alignment
+    public class Alignment
     {
-        None,
-        LawfulGood,
-        NeutralGood,
-        ChaoticGood,
-        LawfulNeutral,
-        Neutral,
-        ChaoticNeutral,
-        LawfulEvil,
-        NeutralEvil,
-        ChaoticEvil
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

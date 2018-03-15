@@ -18,7 +18,7 @@
         <label class="col-xs-2 control-label" asp-for="Character.Alignment"></label>
         <div class="col-xs-10">
             <select class="form-control" asp-for="Character.Alignment"
-                    asp-items="@Html.GetEnumSelectList<Alignment>()"></select>
+                    asp-items="@(new SelectList(Model.Alignments, "Id", "Name"))"></select>
             <span asp-validation-for="Character.Alignment"></span>
         </div>
     </div>

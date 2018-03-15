@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using SessionManager.Data;
 using SessionManager.Services;
+using System;
 using System.Threading.Tasks;
 
 namespace ScriptPad.Tweak
@@ -18,6 +19,29 @@ namespace ScriptPad.Tweak
          
 
         static void AddTestEntities()
+        {
+            //addRaces();
+            addAlignments();
+        }
+
+        static void SetupServices()
+        {
+            var services = new ServiceCollection();
+            services.AddDbContext<SessionManagerDbContext>(
+                options => options.UseSqlServer(local));
+            services.AddScoped<ICharacterData, SqlCharacterData>();
+            services.AddScoped<IRaceData, SqlRaceData>();
+            services.AddScoped<IAlignmentData, SqlAlignmentData>();
+            var provider = services.BuildServiceProvider();
+
+            _dbContext = provider.GetService<SessionManagerDbContext>();
+        }
+
+        static string local = "Server=(localdb)\\MSSQLLocalDB;Database=SessionManager;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+        public static string Local { get => local; set => local = value; }
+
+        static void addRaces()
         {
             IRaceData _raceData = new SqlRaceData(_dbContext);
 
@@ -85,20 +109,54 @@ namespace ScriptPad.Tweak
             });
         }
 
-        static void SetupServices()
+        static void addAlignments()
         {
-            var services = new ServiceCollection();
-            services.AddDbContext<SessionManagerDbContext>(
-                options => options.UseSqlServer(local));
-            services.AddScoped<ICharacterData, SqlCharacterData>();
-            services.AddScoped<IRaceData, SqlRaceData>();
-            var provider = services.BuildServiceProvider();
+            IAlignmentData _alignmentData = new SqlAlignmentData(_dbContext);
 
-            _dbContext = provider.GetService<SessionManagerDbContext>();
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Lawful Good"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Neutral Good"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Chaotic Good"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Lawful Neutral"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Neutral"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Chaotic Neutral"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Lawful Evil"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Neutral Evil"
+            });
+
+            _alignmentData.Add(new SessionManager.Models.Alignment
+            {
+                Name = "Chaotic Evil"
+            });
         }
-
-        static string local = "Server=(localdb)\\MSSQLLocalDB;Database=SessionManager;Trusted_Connection=True;MultipleActiveResultSets=true";
-
-        public static string Local { get => local; set => local = value; }
     }
 }

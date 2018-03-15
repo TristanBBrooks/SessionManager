@@ -22,5 +22,7 @@ namespace SessionManager.ViewModels
         public int Experience { get; set; }
 
         public IEnumerable<Race> Races { get; set; }
+
+        public IEnumerable<Alignment> Alignments { get; set; }
     }
 }

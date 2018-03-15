@@ -15,11 +15,13 @@ namespace SessionManager.Controllers
     {
         private ICharacterData _characterData;
         private IRaceData _raceData;
+        private IAlignmentData _alignmentData;
 
-        public CharacterController(ICharacterData characterData, IRaceData raceData)
+        public CharacterController(ICharacterData characterData, IRaceData raceData, IAlignmentData alignmentData)
         {
             _characterData = characterData;
             _raceData = raceData;
+            _alignmentData = alignmentData;
         }
 
         [AllowAnonymous]
@@ -47,7 +49,8 @@ namespace SessionManager.Controllers
         {
             var model = new CharacterInputModel()
             {
-                Races = _raceData.GetAll()
+                Races = _raceData.GetAll(),
+                Alignments = _alignmentData.GetAll()
             };
 
             return View(model);

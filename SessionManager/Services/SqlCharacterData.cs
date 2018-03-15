@@ -1,8 +1,6 @@
 ﻿using SessionManager.Data;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using SessionManager.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,12 +25,18 @@ namespace SessionManager.Services
 
         public Character Get(int id)
         {
-            return _context.Characters.Include(_ => _.Race).FirstOrDefault(r => r.Id == id);
+            return _context.Characters
+                .Include(_ => _.Race)
+                .Include(_ => _.Alignment)
+                .FirstOrDefault(r => r.Id == id);
         }
 
         public IEnumerable<Character> GetAll()
         {
-            return _context.Characters.Include(_ => _.Race).OrderBy(r => r.Name);
+            return _context.Characters
+                .Include(_ => _.Race)
+                .Include(_ => _.Alignment)
+                .OrderBy(r => r.Name);
         }
 
         public Character Update(Character character)

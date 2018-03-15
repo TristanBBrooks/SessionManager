@@ -40,6 +40,7 @@ namespace SessionManager
                 options => options.UseSqlServer(_configuration.GetConnectionString("SessionManager")));
             services.AddScoped<ICharacterData, SqlCharacterData>();
             services.AddScoped<IRaceData, SqlRaceData>();
+            services.AddScoped<IAlignmentData, SqlAlignmentData>();
             services.AddMvc();
         }
 

@@ -21,12 +21,24 @@ namespace SessionManager.Migrations
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("SessionManager.Models.Alignment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Alignments");
+                });
+
             modelBuilder.Entity("SessionManager.Models.Character", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("Alignment");
+                    b.Property<int?>("AlignmentId");
 
                     b.Property<int>("Experience");
 
@@ -39,6 +51,8 @@ namespace SessionManager.Migrations
                     b.Property<int>("Speed");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AlignmentId");
 
                     b.HasIndex("RaceId");
 
@@ -63,6 +77,10 @@ namespace SessionManager.Migrations
 
             modelBuilder.Entity("SessionManager.Models.Character", b =>
                 {
+                    b.HasOne("SessionManager.Models.Alignment", "Alignment")
+                        .WithMany()
+                        .HasForeignKey("AlignmentId");
+
                     b.HasOne("SessionManager.Models.Race", "Race")
                         .WithMany()
                         .HasForeignKey("RaceId");
