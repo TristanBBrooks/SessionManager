@@ -8,13 +8,9 @@ namespace SessionManager.Models
 
         public string Name { get; set; }
 
-        //public Subrace Subrace { get; set; }
+        public IEnumerable<Subrace> Subraces { get; set; }
 
         //public AbilityScores AbilityScores { get; set; }
-
-        public Size Size { get; set; }
-
-        public int Speed { get; set; }
 
         //public Proficiencies Proficiencies { get; set; }
 

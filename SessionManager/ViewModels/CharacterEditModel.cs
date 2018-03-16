@@ -9,7 +9,7 @@ namespace SessionManager.ViewModels
         public string Name { get; set; }
 
         [Required]
-        public int Race { get; set; }
+        public int Subrace { get; set; }
 
         [Required]
         public Alignment Alignment { get; set; }

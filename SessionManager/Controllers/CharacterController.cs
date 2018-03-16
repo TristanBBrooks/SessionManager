@@ -16,12 +16,17 @@ namespace SessionManager.Controllers
         private ICharacterData _characterData;
         private IRaceData _raceData;
         private IAlignmentData _alignmentData;
+        private ISubraceData _subraceData;
 
-        public CharacterController(ICharacterData characterData, IRaceData raceData, IAlignmentData alignmentData)
+        public CharacterController(ICharacterData characterData,
+            IRaceData raceData,
+            IAlignmentData alignmentData,
+            ISubraceData subraceData)
         {
             _characterData = characterData;
             _raceData = raceData;
             _alignmentData = alignmentData;
+            _subraceData = subraceData;
         }
 
         [AllowAnonymous]
@@ -49,7 +54,7 @@ namespace SessionManager.Controllers
         {
             var model = new CharacterInputModel()
             {
-                Races = _raceData.GetAll(),
+                Subraces = _subraceData.GetAllPlayable(),
                 Alignments = _alignmentData.GetAll()
             };
 
@@ -62,17 +67,16 @@ namespace SessionManager.Controllers
         {
             if (ModelState.IsValid)
             {
-                var races = _raceData.GetAll();
-                var modelRace = races.First(_ => _.Id == model.Race);
+                var subrace = _subraceData.Get(model.Subrace);
 
                 var newCharacter = new Character()
                 {
                     Name = model.Name,
                     Alignment = model.Alignment,
-                    Race = modelRace,
+                    Subrace = subrace,
                     Level = model.Level,
                     Experience = model.Experience,
-                    Speed = modelRace.Speed
+                    Speed = subrace.Speed
                 };
 
                 newCharacter = _characterData.Add(newCharacter);
@@ -83,7 +87,7 @@ namespace SessionManager.Controllers
             {
                 var viewModel = new CharacterInputModel()
                 {
-                    Races = _raceData.GetAll()
+                    Subraces = _subraceData.GetAllPlayable()
                 };
 
                 return View(viewModel);

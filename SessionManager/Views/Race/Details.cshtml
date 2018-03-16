@@ -9,22 +9,19 @@
     <div class="row">
         <div class="col-xs-2" align="right" style="border-right: 2px solid grey;">
             <div>
-                <b>Size</b>
+                <b>Subraces</b>
             </div>
             <br />
-            <div>
-                <b>Speed</b>
-            </div>
         </div>
         <div class="col-xs-10" align="left" style="background-color: whitesmoke; border-radius: 15px 30px 30px 5px;">
             <div>
-                @Model.Size
+                @{ 
+                    foreach (var subrace in Model.Subraces)
+                    {
+                        <div>@subrace.Name</div>
+                    }
+                }
             </div>
-            <br />
-            <div>
-                @Model.Speed
-            </div>
-
         </div>
     </div>
     <br />

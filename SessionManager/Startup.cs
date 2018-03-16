@@ -41,6 +41,7 @@ namespace SessionManager
             services.AddScoped<ICharacterData, SqlCharacterData>();
             services.AddScoped<IRaceData, SqlRaceData>();
             services.AddScoped<IAlignmentData, SqlAlignmentData>();
+            services.AddScoped<ISubraceData, SqlSubraceData>();
             services.AddMvc();
         }
 

@@ -9,21 +9,21 @@ namespace SessionManager.Pages.Characters
     public class EditModel : PageModel
     {
         private ICharacterData _characterData;
-        private IRaceData _raceData;
+        private ISubraceData _subraceData;
         private IAlignmentData _alignmentData;
-        public IEnumerable<Race> Races;
+        public IEnumerable<Subrace> Subraces;
         public IEnumerable<Alignment> Alignments;
 
         [BindProperty]
         public Character Character { get; set; }
 
-        public EditModel(ICharacterData characterData, IRaceData raceData, IAlignmentData alignmentData)
+        public EditModel(ICharacterData characterData, ISubraceData subraceData, IAlignmentData alignmentData)
         {
             _characterData = characterData;
-            _raceData = raceData;
+            _subraceData = subraceData;
             _alignmentData = alignmentData;
 
-            Races = _raceData.GetAll();
+            Subraces = _subraceData.GetAllPlayable();
             Alignments = _alignmentData.GetAll();
         }
 

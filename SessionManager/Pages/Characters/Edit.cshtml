@@ -23,11 +23,11 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="col-xs-2 control-label" asp-for="Character.Race"></label>
+        <label class="col-xs-2 control-label" asp-for="Character.Subrace"></label>
         <div class="col-xs-10">
-            <select class="form-control" asp-for="Character.Race"
-                    asp-items="@(new SelectList(Model.Races, "Id", "Name"))"></select>
-            <span asp-validation-for="Character.Race"></span>
+            <select class="form-control" asp-for="Character.Subrace"
+                    asp-items="@(new SelectList(Model.Subraces, "Id", "Name"))"></select>
+            <span asp-validation-for="Character.Subrace"></span>
         </div>
     </div>
     <div class="form-group">

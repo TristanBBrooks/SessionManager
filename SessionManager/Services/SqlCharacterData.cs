@@ -26,7 +26,7 @@ namespace SessionManager.Services
         public Character Get(int id)
         {
             return _context.Characters
-                .Include(_ => _.Race)
+                .Include(_ => _.Subrace)
                 .Include(_ => _.Alignment)
                 .FirstOrDefault(r => r.Id == id);
         }
@@ -34,7 +34,7 @@ namespace SessionManager.Services
         public IEnumerable<Character> GetAll()
         {
             return _context.Characters
-                .Include(_ => _.Race)
+                .Include(_ => _.Subrace)
                 .Include(_ => _.Alignment)
                 .OrderBy(r => r.Name);
         }

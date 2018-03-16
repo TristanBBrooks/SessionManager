@@ -10,7 +10,7 @@ namespace SessionManager.ViewModels
         public string Name { get; set; }
 
         [Required]
-        public Race Race { get; set; }
+        public Subrace Subrace { get; set; }
 
         [Required]
         public Alignment Alignment { get; set; }
@@ -21,7 +21,7 @@ namespace SessionManager.ViewModels
         [Required]
         public int Experience { get; set; }
 
-        public IEnumerable<Race> Races { get; set; }
+        public IEnumerable<Subrace> Subraces { get; set; }
 
         public IEnumerable<Alignment> Alignments { get; set; }
     }

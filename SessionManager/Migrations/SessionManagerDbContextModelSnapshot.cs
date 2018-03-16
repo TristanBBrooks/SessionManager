@@ -46,15 +46,15 @@ namespace SessionManager.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int?>("RaceId");
-
                     b.Property<int>("Speed");
+
+                    b.Property<int?>("SubraceId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AlignmentId");
 
-                    b.HasIndex("RaceId");
+                    b.HasIndex("SubraceId");
 
                     b.ToTable("Characters");
                 });
@@ -66,13 +66,31 @@ namespace SessionManager.Migrations
 
                     b.Property<string>("Name");
 
+                    b.HasKey("Id");
+
+                    b.ToTable("Races");
+                });
+
+            modelBuilder.Entity("SessionManager.Models.Subrace", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.Property<bool>("Playable");
+
+                    b.Property<int?>("RaceId");
+
                     b.Property<int>("Size");
 
                     b.Property<int>("Speed");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Races");
+                    b.HasIndex("RaceId");
+
+                    b.ToTable("Subraces");
                 });
 
             modelBuilder.Entity("SessionManager.Models.Character", b =>
@@ -81,8 +99,15 @@ namespace SessionManager.Migrations
                         .WithMany()
                         .HasForeignKey("AlignmentId");
 
-                    b.HasOne("SessionManager.Models.Race", "Race")
+                    b.HasOne("SessionManager.Models.Subrace", "Subrace")
                         .WithMany()
+                        .HasForeignKey("SubraceId");
+                });
+
+            modelBuilder.Entity("SessionManager.Models.Subrace", b =>
+                {
+                    b.HasOne("SessionManager.Models.Race", "Race")
+                        .WithMany("Subraces")
                         .HasForeignKey("RaceId");
                 });
 #pragma warning restore 612, 618

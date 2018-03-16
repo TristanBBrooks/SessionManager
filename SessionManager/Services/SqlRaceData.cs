@@ -27,12 +27,16 @@ namespace SessionManager.Services
 
         public Race Get(int id)
         {
-            return _context.Races.FirstOrDefault(r => r.Id == id);
+            return _context.Races
+                .Include(_ => _.Subraces)
+                .FirstOrDefault(r => r.Id == id);
         }
 
         public IEnumerable<Race> GetAll()
         {
-            return _context.Races.OrderBy(r => r.Name).ToList();
+            return _context.Races
+                .Include(_ => _.Subraces)
+                .OrderBy(r => r.Name).ToList();
         }
 
         public Race Update(Race race)

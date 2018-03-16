@@ -8,7 +8,7 @@ namespace SessionManager.Models
 
         public string Name { get; set; }
 
-        public Race Race { get; set; }
+        public Subrace Subrace { get; set; }
 
         public Alignment Alignment { get; set; }
 
