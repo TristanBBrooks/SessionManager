@@ -18,7 +18,7 @@ namespace SessionManager.Models
 
         public int Level { get; set; }
 
-        //public Class Class { get; set; } 
+        public Class Class { get; set; } 
 
         //public Proficiencies Proficiencies { get; set; }
 
