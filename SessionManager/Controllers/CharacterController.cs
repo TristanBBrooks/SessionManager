@@ -68,11 +68,13 @@ namespace SessionManager.Controllers
             if (ModelState.IsValid)
             {
                 var subrace = _subraceData.Get(model.Subrace);
+                var alignment = _alignmentData.Get(model.Alignment);
+                
 
                 var newCharacter = new Character()
                 {
                     Name = model.Name,
-                    Alignment = model.Alignment,
+                    Alignment = alignment,
                     Subrace = subrace,
                     Level = model.Level,
                     Experience = model.Experience,

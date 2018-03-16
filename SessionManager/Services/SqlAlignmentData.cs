@@ -30,7 +30,7 @@ namespace SessionManager.Services
 
         public IEnumerable<Alignment> GetAll()
         {
-            return _context.Alignments.OrderBy(_ => _.Name);
+            return _context.Alignments.OrderBy(_ => _.Name).ToList();
         }
 
         public Alignment Update(Alignment alignment)

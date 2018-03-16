@@ -12,7 +12,7 @@ namespace SessionManager.ViewModels
         public int Subrace { get; set; }
 
         [Required]
-        public Alignment Alignment { get; set; }
+        public int Alignment { get; set; }
 
         [Required]
         public int Level { get; set; }

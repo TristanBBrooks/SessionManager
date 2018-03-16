@@ -331,24 +331,136 @@ namespace ScriptPad.Tweak
                 Race = gnome
             });
 
+            // Half Elf and all subraces
             var halfelf = _raceData.Add(new Race
             {
                 Name = "Half Elf",
             });
 
+            _subraceData.Add(new Subrace
+            {
+                Name = "Half Elf",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = halfelf
+            });
+
+            // Half Orc and all subraces
             var halforc = _raceData.Add(new Race
             {
                 Name = "Half Orc",
             });
 
+            _subraceData.Add(new Subrace
+            {
+                Name = "Half Orc",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = halforc
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Mountain Half Orc",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = halforc
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Grey Half Orc",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = halforc
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Half Orog",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = halforc
+            });
+
+            // Halfling and all subraces
             var halfling = _raceData.Add(new Race
             {
                 Name = "Halfling",
             });
 
+            _subraceData.Add(new Subrace
+            {
+                Name = "Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+            
+            _subraceData.Add(new Subrace
+            {
+                Name = "Lightfoot Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+            
+            _subraceData.Add(new Subrace
+            {
+                Name = "Trickfinger Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+            
+            _subraceData.Add(new Subrace
+            {
+                Name = "Wiseheart Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Ghostwise Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Stout Halfling",
+                Playable = true,
+                Speed = 25,
+                Size = Size.Small,
+                Race = halfling
+            });
+
+            // Tiefling and all subraces
             var tiefling = _raceData.Add(new Race
             {
                 Name = "Tiefling",
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Tiefling",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = tiefling
             });
         }
 
