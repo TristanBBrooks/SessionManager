@@ -1,0 +1,12 @@
+﻿@model ClassIndexViewModel
+
+@{
+    ViewBag.Title = "Classes";
+}
+
+<h1 align="center">All Classes</h1>
+
+@foreach (var _class in Model.Classes)
+{
+    @Html.Partial("Partials/_Summary", _class)
+}

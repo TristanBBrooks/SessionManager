@@ -16,6 +16,9 @@ namespace SessionManager.ViewModels
         public Alignment Alignment { get; set; }
 
         [Required]
+        public Class Class { get; set; }
+
+        [Required]
         public int Level { get; set; }
 
         [Required]
@@ -24,5 +27,7 @@ namespace SessionManager.ViewModels
         public IEnumerable<Subrace> Subraces { get; set; }
 
         public IEnumerable<Alignment> Alignments { get; set; }
+
+        public IEnumerable<Class> Classes { get; set; }
     }
 }

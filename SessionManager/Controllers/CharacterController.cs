@@ -17,16 +17,19 @@ namespace SessionManager.Controllers
         private IRaceData _raceData;
         private IAlignmentData _alignmentData;
         private ISubraceData _subraceData;
+        private IClassData _classData;
 
         public CharacterController(ICharacterData characterData,
             IRaceData raceData,
             IAlignmentData alignmentData,
-            ISubraceData subraceData)
+            ISubraceData subraceData,
+            IClassData classData)
         {
             _characterData = characterData;
             _raceData = raceData;
             _alignmentData = alignmentData;
             _subraceData = subraceData;
+            _classData = classData;
         }
 
         [AllowAnonymous]
@@ -55,7 +58,8 @@ namespace SessionManager.Controllers
             var model = new CharacterInputModel()
             {
                 Subraces = _subraceData.GetAllPlayable(),
-                Alignments = _alignmentData.GetAll()
+                Alignments = _alignmentData.GetAll(),
+                Classes = _classData.GetAll()
             };
 
             return View(model);
@@ -69,6 +73,7 @@ namespace SessionManager.Controllers
             {
                 var subrace = _subraceData.Get(model.Subrace);
                 var alignment = _alignmentData.Get(model.Alignment);
+                var _class = _classData.Get(model.Class);
                 
 
                 var newCharacter = new Character()
@@ -78,7 +83,8 @@ namespace SessionManager.Controllers
                     Subrace = subrace,
                     Level = model.Level,
                     Experience = model.Experience,
-                    Speed = subrace.Speed
+                    Speed = subrace.Speed,
+                    Class = _class
                 };
 
                 newCharacter = _characterData.Add(newCharacter);
@@ -89,7 +95,9 @@ namespace SessionManager.Controllers
             {
                 var viewModel = new CharacterInputModel()
                 {
-                    Subraces = _subraceData.GetAllPlayable()
+                    Subraces = _subraceData.GetAllPlayable(),
+                    Alignments = _alignmentData.GetAll(),
+                    Classes = _classData.GetAll()
                 };
 
                 return View(viewModel);

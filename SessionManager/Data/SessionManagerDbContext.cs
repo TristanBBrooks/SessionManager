@@ -14,5 +14,6 @@ namespace SessionManager.Data
         public DbSet<Race> Races { get; set; }
         public DbSet<Alignment> Alignments { get; set; }
         public DbSet<Subrace> Subraces { get; set; }
+        public DbSet<Class> Classes { get; set; }
     }
 }

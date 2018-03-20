@@ -3,9 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using SessionManager.Data;
 using SessionManager.Models;
 using SessionManager.Services;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ScriptPad.Tweak
 {
@@ -22,8 +19,69 @@ namespace ScriptPad.Tweak
 
         static void AddTestEntities()
         {
-            addRaces();
-            addAlignments();
+            //addRaces();
+            //addAlignments();
+            addClasses();
+        }
+
+        static void addClasses()
+        {
+            IClassData _classData = new SqlClassData(_dbContext);
+
+            _classData.Add(new Class
+            {
+                Name = "Barbarian"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Bard"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Cleric"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Druid"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Monk"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Paladin"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Ranger"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Rogue"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Sorcerer"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Warlock"
+            });
+
+            _classData.Add(new Class
+            {
+                Name = "Wizard"
+            });
         }
 
         static void SetupServices()
@@ -35,6 +93,7 @@ namespace ScriptPad.Tweak
             services.AddScoped<IRaceData, SqlRaceData>();
             services.AddScoped<IAlignmentData, SqlAlignmentData>();
             services.AddScoped<ISubraceData, SqlSubraceData>();
+            services.AddScoped<IClassData, SqlClassData>();
             var provider = services.BuildServiceProvider();
 
             _dbContext = provider.GetService<SessionManagerDbContext>();

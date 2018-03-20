@@ -28,6 +28,7 @@ namespace SessionManager.Services
             return _context.Characters
                 .Include(_ => _.Subrace)
                 .Include(_ => _.Alignment)
+                .Include(_ => _.Class)
                 .FirstOrDefault(r => r.Id == id);
         }
 
@@ -36,6 +37,7 @@ namespace SessionManager.Services
             return _context.Characters
                 .Include(_ => _.Subrace)
                 .Include(_ => _.Alignment)
+                .Include(_ => _.Class)
                 .OrderBy(r => r.Name);
         }
 

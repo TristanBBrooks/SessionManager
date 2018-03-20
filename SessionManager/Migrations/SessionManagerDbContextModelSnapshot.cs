@@ -40,6 +40,8 @@ namespace SessionManager.Migrations
 
                     b.Property<int?>("AlignmentId");
 
+                    b.Property<int?>("ClassId");
+
                     b.Property<int>("Experience");
 
                     b.Property<int>("Level");
@@ -54,9 +56,23 @@ namespace SessionManager.Migrations
 
                     b.HasIndex("AlignmentId");
 
+                    b.HasIndex("ClassId");
+
                     b.HasIndex("SubraceId");
 
                     b.ToTable("Characters");
+                });
+
+            modelBuilder.Entity("SessionManager.Models.Class", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Classes");
                 });
 
             modelBuilder.Entity("SessionManager.Models.Race", b =>
@@ -98,6 +114,10 @@ namespace SessionManager.Migrations
                     b.HasOne("SessionManager.Models.Alignment", "Alignment")
                         .WithMany()
                         .HasForeignKey("AlignmentId");
+
+                    b.HasOne("SessionManager.Models.Class", "Class")
+                        .WithMany()
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("SessionManager.Models.Subrace", "Subrace")
                         .WithMany()

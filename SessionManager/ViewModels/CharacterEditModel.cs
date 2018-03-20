@@ -9,6 +9,9 @@ namespace SessionManager.ViewModels
         public string Name { get; set; }
 
         [Required]
+        public int Class { get; set; }
+
+        [Required]
         public int Subrace { get; set; }
 
         [Required]
