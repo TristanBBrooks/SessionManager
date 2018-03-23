@@ -12,7 +12,7 @@ namespace SessionManager.Models
 
         //public AbilityScores AbilityScores { get; set; }
 
-        //public Proficiencies Proficiencies { get; set; }
+        //public IEnumerable<Proficiency> Proficiencies { get; set; }
 
         //public IEnumerable<Language> Languages { get; set; }
 

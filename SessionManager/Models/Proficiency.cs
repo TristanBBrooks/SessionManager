@@ -1,6 +1,6 @@
 ﻿namespace SessionManager.Models
 {
-    public class Proficiencies
+    public class Proficiency
     {
     }
 }

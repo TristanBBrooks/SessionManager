@@ -20,7 +20,7 @@ namespace SessionManager.Models
 
         public Class Class { get; set; } 
 
-        //public Proficiencies Proficiencies { get; set; }
+        //public IEnumerable<Proficiency> Proficiencies { get; set; }
 
         //public IEnumerable<Spell> Spells { get; set; }
 
