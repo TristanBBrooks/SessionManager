@@ -84,7 +84,13 @@ namespace SessionManager.Controllers
                     Level = model.Level,
                     Experience = model.Experience,
                     Speed = subrace.Speed,
-                    Class = _class
+                    Class = _class,
+                    Strength = subrace.Strength + subrace.Race.Strength,
+                    Wisdom = subrace.Wisdom + subrace.Race.Wisdom,
+                    Intelligence = subrace.Intelligence + subrace.Race.Intelligence,
+                    Dexterity = subrace.Dexterity + subrace.Race.Dexterity,
+                    Constitution = subrace.Constitution + subrace.Race.Constitution,
+                    Charisma = subrace.Charisma + subrace.Race.Charisma
                 };
 
                 newCharacter = _characterData.Add(newCharacter);

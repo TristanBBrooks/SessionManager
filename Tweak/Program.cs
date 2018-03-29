@@ -19,8 +19,8 @@ namespace ScriptPad.Tweak
 
         static void AddTestEntities()
         {
-            //addRaces();
-            //addAlignments();
+            addRaces();
+            addAlignments();
             addClasses();
         }
 
@@ -157,6 +157,12 @@ namespace ScriptPad.Tweak
             var human = _raceData.Add(new Race
             {
                 Name = "Human",
+                Strength = 0,
+                Charisma = 0,
+                Constitution = 0,
+                Intelligence = 0,
+                Dexterity = 0,
+                Wisdom = 0
             });
 
             _subraceData.Add(new Subrace
@@ -165,13 +171,25 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Size = Size.Medium,
                 Speed = 30,
-                Race = human
+                Race = human,
+                Strength = 1,
+                Dexterity = 1,
+                Wisdom = 1,
+                Charisma = 1,
+                Constitution = 1,
+                Intelligence = 1
             });
 
             // Dragonborn and all subraces
             var dragonborn = _raceData.Add(new Race
             {
                 Name = "Dragonborn",
+                Strength = 2,
+                Charisma = 1,
+                Constitution = 0,
+                Intelligence = 0,
+                Dexterity = 0,
+                Wisdom = 0
             });
 
             _subraceData.Add(new Subrace
@@ -268,6 +286,12 @@ namespace ScriptPad.Tweak
             var dwarf = _raceData.Add(new Race
             {
                 Name = "Dwarf",
+                Constitution = 2,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -276,7 +300,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = dwarf
+                Race = dwarf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -285,7 +315,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = dwarf
+                Race = dwarf,
+                Constitution = 0,
+                Strength = 1,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -294,7 +330,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = dwarf
+                Race = dwarf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 1,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -303,13 +345,25 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = dwarf
+                Race = dwarf,
+                Constitution = 0,
+                Strength = 2,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             // Elf and all subraces
             var elf = _raceData.Add(new Race
             {
                 Name = "Elf",
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 2,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -318,7 +372,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = elf
+                Race = elf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -327,7 +387,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = elf
+                Race = elf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 1,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -336,22 +402,56 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = elf
+                Race = elf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 1,
+                Intelligence = 0,
+                Charisma = 0
             });
 
+            // NOTE : Choose Charisma or Intelligence to + 1
             _subraceData.Add(new Subrace
             {
                 Name = "Drow Elf",
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = elf
+                Race = elf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
+            });
+
+            _subraceData.Add(new Subrace
+            {
+                Name = "Eladrin Elf",
+                Playable = true,
+                Speed = 30,
+                Size = Size.Medium,
+                Race = elf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 1,
+                Charisma = 0
             });
 
             // Gnome and all subraces
             var gnome = _raceData.Add(new Race
             {
                 Name = "Gnome",
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 2,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -360,7 +460,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = gnome
+                Race = gnome,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -369,7 +475,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = gnome
+                Race = gnome,
+                Constitution = 1,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -378,7 +490,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = gnome
+                Race = gnome,
+                Constitution = 1,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -387,13 +505,26 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Medium,
-                Race = gnome
+                Race = gnome,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 1,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             // Half Elf and all subraces
+            // NOTE : Choose 2 attributes to + 1
             var halfelf = _raceData.Add(new Race
             {
                 Name = "Half Elf",
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 2
             });
 
             _subraceData.Add(new Subrace
@@ -402,13 +533,25 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = halfelf
+                Race = halfelf,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             // Half Orc and all subraces
             var halforc = _raceData.Add(new Race
             {
                 Name = "Half Orc",
+                Constitution = 1,
+                Strength = 2,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -417,7 +560,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = halforc
+                Race = halforc,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -426,7 +575,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = halforc
+                Race = halforc,
+                Constitution = 1,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -435,7 +590,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = halforc
+                Race = halforc,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 1,
+                Wisdom = 1,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -444,13 +605,25 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = halforc
+                Race = halforc,
+                Constitution = 2,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             // Halfling and all subraces
             var halfling = _raceData.Add(new Race
             {
                 Name = "Halfling",
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 2,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -459,7 +632,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Small,
-                Race = halfling
+                Race = halfling,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
             
             _subraceData.Add(new Subrace
@@ -468,7 +647,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Small,
-                Race = halfling
+                Race = halfling,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 1
             });
             
             _subraceData.Add(new Subrace
@@ -477,7 +662,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Small,
-                Race = halfling
+                Race = halfling,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 1,
+                Charisma = 0
             });
             
             _subraceData.Add(new Subrace
@@ -486,16 +677,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Small,
-                Race = halfling
-            });
-
-            _subraceData.Add(new Subrace
-            {
-                Name = "Ghostwise Halfling",
-                Playable = true,
-                Speed = 25,
-                Size = Size.Small,
-                Race = halfling
+                Race = halfling,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 1,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             _subraceData.Add(new Subrace
@@ -504,13 +692,25 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 25,
                 Size = Size.Small,
-                Race = halfling
+                Race = halfling,
+                Constitution = 1,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
 
             // Tiefling and all subraces
             var tiefling = _raceData.Add(new Race
             {
                 Name = "Tiefling",
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 1,
+                Charisma = 2
             });
 
             _subraceData.Add(new Subrace
@@ -519,7 +719,13 @@ namespace ScriptPad.Tweak
                 Playable = true,
                 Speed = 30,
                 Size = Size.Medium,
-                Race = tiefling
+                Race = tiefling,
+                Constitution = 0,
+                Strength = 0,
+                Dexterity = 0,
+                Wisdom = 0,
+                Intelligence = 0,
+                Charisma = 0
             });
         }
 

@@ -12,8 +12,6 @@ namespace SessionManager.Models
 
         public Alignment Alignment { get; set; }
 
-        //public AbilityScores AbilityScores { get; set; }
-
         public int Experience { get; set; }
 
         public int Level { get; set; }
@@ -29,5 +27,17 @@ namespace SessionManager.Models
         //public Inventory Inventory { get; set; }
 
         public int Speed { get; set; }
+
+        public int Strength { get; set; }
+
+        public int Dexterity { get; set; }
+
+        public int Constitution { get; set; }
+
+        public int Intelligence { get; set; }
+
+        public int Wisdom { get; set; }
+
+        public int Charisma { get; set; }
     }
 }

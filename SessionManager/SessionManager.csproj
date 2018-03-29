@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\AbilityScores.cs" />
     <Compile Remove="Pages\Characters\Create.cshtml.cs" />
   </ItemGroup>
 

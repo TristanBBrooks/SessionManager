@@ -40,9 +40,17 @@ namespace SessionManager.Migrations
 
                     b.Property<int?>("AlignmentId");
 
+                    b.Property<int>("Charisma");
+
                     b.Property<int?>("ClassId");
 
+                    b.Property<int>("Constitution");
+
+                    b.Property<int>("Dexterity");
+
                     b.Property<int>("Experience");
+
+                    b.Property<int>("Intelligence");
 
                     b.Property<int>("Level");
 
@@ -50,7 +58,11 @@ namespace SessionManager.Migrations
 
                     b.Property<int>("Speed");
 
+                    b.Property<int>("Strength");
+
                     b.Property<int?>("SubraceId");
+
+                    b.Property<int>("Wisdom");
 
                     b.HasKey("Id");
 
@@ -80,7 +92,19 @@ namespace SessionManager.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Charisma");
+
+                    b.Property<int>("Constitution");
+
+                    b.Property<int>("Dexterity");
+
+                    b.Property<int>("Intelligence");
+
                     b.Property<string>("Name");
+
+                    b.Property<int>("Strength");
+
+                    b.Property<int>("Wisdom");
 
                     b.HasKey("Id");
 
@@ -92,6 +116,14 @@ namespace SessionManager.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Charisma");
+
+                    b.Property<int>("Constitution");
+
+                    b.Property<int>("Dexterity");
+
+                    b.Property<int>("Intelligence");
+
                     b.Property<string>("Name");
 
                     b.Property<bool>("Playable");
@@ -101,6 +133,10 @@ namespace SessionManager.Migrations
                     b.Property<int>("Size");
 
                     b.Property<int>("Speed");
+
+                    b.Property<int>("Strength");
+
+                    b.Property<int>("Wisdom");
 
                     b.HasKey("Id");
 
